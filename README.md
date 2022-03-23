@@ -9,7 +9,7 @@
        Tree Topology:   
     ```
        sudo mn --controller remote --topo tree,depth=2,fanout=2
-        ```
+    ```
         
        Linear Topology with 2 switches: 
     ```
@@ -34,7 +34,7 @@ sudo mn --controller remote --topo linear,2
      
      ```
      ryu-manager ryu.app.simple_switch __ofp-tcp-listen-port 6635__
-    ```
+     ```
     
 * Then, you can run the example you like using python:
 
