@@ -16,12 +16,13 @@
 
 * After successful installation, run the SDN controller using ryu-manager with simple switch app: 
 
-  1) ryu-manager ryu.app.simple_switch
-  
+    ```
+    ryu-manager ryu.app.simple_switch
+    ```
      To run the controller on a specific port (e.g: __6635__): 
-  
+     ```
      ryu-manager ryu.app.simple_switch __--ofp-tcp-listen-port 6635__
-
+    ```
 * Then, you can run the example you like using python:
   
   1) sudo python low_level_api.py
