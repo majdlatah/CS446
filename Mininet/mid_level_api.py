@@ -12,5 +12,10 @@ c0 = net.addController( 'c0', RemoteController)
 net.addLink( h1, s1 )
 net.addLink( h2, s1 )
 net.start()
+
+print(h1.cmd("ping -c 3", h2.IP()))
+
+net.iperf(( h1, h2 ))
+
 CLI( net )
 net.stop()

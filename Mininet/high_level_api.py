@@ -13,6 +13,17 @@ class SingleSwitchTopo(Topo):
 			self.addLink(h,s1)
 
 net = Mininet(topo=SingleSwitchTopo(5), controller=RemoteController)
+
 net.start()
+
+h1, h2 = net.getNodeByName('h0', 'h1')
+
+h1_IpAddress = h1.IP()
+
+print("Ping from "+h1.IP()+" to "+h2.IP())
+print(h1.cmd("ping -c 3", h1_IpAddress))
+
+net.iperf( ( h1, h2 ))
+
 CLI(net)
 net.stop()
