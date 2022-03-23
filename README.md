@@ -6,11 +6,17 @@
 
     1) Mininet: http://mininet.org/download/#option-2-native-installation-from-source
     ```
-       Tree Topology:   sudo mn --controller remote --topo tree,depth=2,fanout=2
-       
-       Linear Topology: sudo mn --controller remote --topo linear,2
-       
-       Single Topology: sudo mn --controller remote --topo single,2
+       Tree Topology:   
+    ```
+       sudo mn --controller remote --topo tree,depth=2,fanout=2
+        ```
+       Linear Topology with 2 switches: 
+    ```
+sudo mn --controller remote --topo linear,2
+    ```
+       Single Topology with 2 hosts:
+    ```
+    sudo mn --controller remote --topo single,2
     ```
     2) Ryu: https://ryu-sdn.org/
 
@@ -21,8 +27,9 @@
     ```
      To run the controller on a specific port (e.g: __6635__): 
      ```
-     ryu-manager ryu.app.simple_switch __--ofp-tcp-listen-port 6635__
+     ryu-manager ryu.app.simple_switch __ofp-tcp-listen-port 6635__
     ```
 * Then, you can run the example you like using python:
-  
-  1) sudo python low_level_api.py
+  ```
+  sudo python low_level_api.py
+  ```
