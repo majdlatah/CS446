@@ -33,7 +33,7 @@
      To run the controller on a specific port (e.g: __6635__): 
      
      ```
-     ryu-manager ryu.app.simple_switch ofp-tcp-listen-port 6635
+     ryu-manager ryu.app.simple_switch --ofp-tcp-listen-port 6635
      ```
     
 * Then, you can run the example you like using python:
